@@ -1,2 +1,61 @@
-# brain-mri-tumor-segmentation-and-grade-prediction
-Deep learning pipeline for brain MRI tumor segmentation and WHO grade prediction using UCSF-PDGM
+# Brain MRI Tumor Segmentation and Grade Prediction
+
+**Status: In development.** Environment setup is verified; MRI acquisition is underway. No models have been trained or evaluated for this project yet.
+
+A personal medical imaging project developing a reproducible deep learning pipeline to segment diffuse gliomas and predict CNS WHO grade from preoperative MRI using UCSF-PDGM. Development and training use Case Western Reserve University's Markov HPC cluster.
+
+## Planned pipeline
+
+1. Validate multisequence MRI, tumor masks, and clinical labels.
+2. Establish patient-disjoint training, validation, and test splits.
+3. Train a tumor segmentation baseline.
+4. Train a classifier to predict WHO grades 2, 3, and 4.
+5. Evaluate segmentation with Dice and classification with macro-F1, balanced accuracy, per-class recall, and confusion matrices.
+6. Publish reproducible experiments, error analysis, and selected visual results.
+
+These are planned capabilities. Tumor grade is distinct from conventional cancer stage. This is a research and educational project, not a clinical diagnostic tool.
+
+## Verified progress
+
+- Python 3.11.5 environment created on Markov.
+- PyTorch 2.7.1+cu126 installed; GPU matrix multiplication verified on an NVIDIA GeForce RTX 2080 Ti (11 GB).
+- NumPy, SciPy, pandas, NiBabel, scikit-learn, Matplotlib, and tqdm installed.
+- Package imports, NumPy-to-GPU interoperability, and dependency checks passed.
+- Clinical metadata inspected: 501 exam records containing 56 grade-2, 43 grade-3, and 402 grade-4 labels before patient reconciliation or exclusions.
+- Exact package versions saved on HPC; the lock file will be committed after retrieval.
+
+## Dataset and evaluation design
+
+[UCSF-PDGM Version 5](https://www.cancerimagingarchive.net/collection/ucsf-pdgm/) includes preoperative MRI, tumor annotations, pathology-derived grade labels, and molecular information. It contains 501 exams from 495 unique patients. Distinct exam IDs can refer to the same patient; documented follow-ups must be reconciled before splitting.
+
+The cohort is strongly imbalanced toward grade 4. Overall accuracy alone will not be used to assess classification. Final patient counts, exclusions, and splits will be reported after validation. Preprocessing statistics and model selection will use development data only. Any future pretrained model requires a training-data overlap audit because some UCSF-PDGM cases also appear in BraTS.
+
+## HPC environment
+
+Verified configuration: Python 3.11.5, PyTorch 2.7.1+cu126, NVIDIA driver 570.211.01, RTX 2080 Ti.
+
+Load Python and activate the environment in each new shell or SLURM job:
+
+```bash
+module load Python/3.11.5-GCCcore-13.2.0
+source "$HOME/projects/brain-glioma/.venv/bin/activate"
+```
+
+Current working locations:
+
+- Code and environment: `$HOME/projects/brain-glioma`
+- Large data and working outputs: `/scratch/markov3/users/$USER/brain-glioma`
+
+Run training through SLURM GPU allocations. Training scripts and reproducible commands will be added as they are validated. Observe cluster quota, retention, and backup policies.
+
+## Version control
+
+Commit source code, SLURM scripts, environment specifications, documentation, de-identified split manifests, aggregate metrics, and selected result figures after each verified milestone.
+
+Raw MRI, source clinical tables, processed arrays, virtual environments, transfer credentials, and large checkpoints are excluded by `.gitignore`. Obtain data separately from TCIA. Aggregate metrics and selected figures can be tracked under `results/`.
+
+## Data citation
+
+Calabrese, E., Villanueva-Meyer, J., Rudie, J., Rauschecker, A., Baid, U., Bakas, S., Cha, S., Mongan, J., & Hess, C. (2022). *The University of California San Francisco Preoperative Diffuse Glioma MRI (UCSF-PDGM) (Version 5)* [dataset]. The Cancer Imaging Archive. https://doi.org/10.7937/tcia.bdgf-8v37
+
+Dataset license: CC BY 4.0. See the collection page for usage and attribution requirements.
