@@ -1,0 +1,67 @@
+# Python environments and generated files
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local secrets and transfer configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*transfer_spec*.json
+*aspera*.log
+
+# Source and processed data
+/data/
+/preprocessed/
+/nnUNet_raw/
+/nnUNet_preprocessed/
+/nnUNet_results/
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+*.bval
+*.bvec
+*.npy
+*.npz
+*.h5
+*.hdf5
+UCSF-PDGM-metadata*.csv
+
+# Model weights and training logs
+/checkpoints/
+/logs/
+/runs/
+/wandb/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+*.joblib
+slurm-*.out
+
+# Large download archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.part
+*.aspx
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep aggregate metrics and selected figures trackable under results/.
