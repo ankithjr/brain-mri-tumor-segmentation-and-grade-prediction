@@ -4,6 +4,17 @@
 
 A personal medical imaging project developing a reproducible deep learning pipeline to segment diffuse gliomas and predict CNS WHO grade from preoperative MRI using UCSF-PDGM. Development and training use Case Western Reserve University's Markov HPC cluster.
 
+## Project Focus
+
+- Multisequence **brain MRI**
+- Tumor **segmentation**
+- CNS WHO **grade prediction**
+- Patient-disjoint evaluation
+- Reproducible PyTorch/HPC workflow
+- Explicit handling of class imbalance and dataset leakage risk
+
+This repository is intentionally transparent about project status: environment and data validation are in progress, and no model results are reported before they are actually produced.
+
 ## Planned pipeline
 
 1. Validate multisequence MRI, tumor masks, and clinical labels.
