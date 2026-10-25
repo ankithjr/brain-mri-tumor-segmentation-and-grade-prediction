@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "cohort": "Initial exams only; six follow-ups excluded",
+  "patients": 495,
+  "patient_overlap": 0,
+  "splits": {
+    "train": {
+      "patients": 346,
+      "grade_counts": {
+        "2": 39,
+        "3": 30,
+        "4": 277
+      }
+    },
+    "validation": {
+      "patients": 74,
+      "grade_counts": {
+        "2": 8,
+        "3": 7,
+        "4": 59
+      }
+    },
+    "test": {
+      "patients": 75,
+      "grade_counts": {
+        "2": 9,
+        "3": 6,
+        "4": 60
+      }
+    }
+  }
+}
