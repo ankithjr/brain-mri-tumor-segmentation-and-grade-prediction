@@ -35,7 +35,7 @@ These are planned capabilities. Tumor grade is distinct from conventional cancer
 - Clinical metadata inspected: 501 exam records containing 56 grade-2, 43 grade-3, and 402 grade-4 labels before patient reconciliation or exclusions.
 - Core MRI archive transferred to HPC with matching Windows/HPC SHA-256 checksums.
 - Extracted 2,505 NIfTI files; all passed full gzip stream integrity checks (zero failures). See [validation record](results/data-transfer-validation.json) and [reusable validator](scripts/validate_gzip.py). The subsequent automated audit passed for all 501 exams: one file per required modality, matching 3D shapes and affines within each exam, finite voxels, and nonempty integer tumor masks. Observed mask labels are 0, 1, 2, and 4. Exam IDs match metadata and follow-up grouping identifies 495 patients. See [audit script](scripts/audit_dataset.py) and [aggregate audit](results/dataset-audit.json). A visual spot-check of one initial exam per grade found no obvious cross-sequence mask displacement; this is not a full annotation review. Label semantic verification remains pending.
-- Exact package versions saved on HPC; the lock file will be committed after retrieval.
+- Exact package versions from the verified HPC environment are archived in [requirements-lock.txt](requirements-lock.txt). This is a pip-freeze snapshot, not a hash-locked dependency resolution.
 
 ## Dataset and evaluation design
 
@@ -55,6 +55,8 @@ Load Python and activate the environment in each new shell or SLURM job:
 module load Python/3.11.5-GCCcore-13.2.0
 source "$HOME/projects/brain-glioma/.venv/bin/activate"
 ```
+
+The snapshot includes `torch==2.7.1+cu126`, obtained from the PyTorch CUDA 12.6 wheel index (`https://download.pytorch.org/whl/cu126`). Preserve that wheel source when recreating the environment. Python module loading is required in each new shell/job to supply runtime libraries; invoking the virtual environment's Python alone previously failed to locate `libbz2.so.1.0`.
 
 Current working locations:
 
