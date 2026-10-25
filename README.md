@@ -1,6 +1,6 @@
 # Brain MRI Tumor Segmentation and Grade Prediction
 
-**Status: In development.** Environment setup is verified; MRI acquisition is underway. No models have been trained or evaluated for this project yet.
+**Status: In development.** Environment setup and core MRI transfer are verified; image and label auditing is next. No models have been trained or evaluated for this project yet.
 
 A personal medical imaging project developing a reproducible deep learning pipeline to segment diffuse gliomas and predict CNS WHO grade from preoperative MRI using UCSF-PDGM. Development and training use Case Western Reserve University's Markov HPC cluster.
 
@@ -33,6 +33,8 @@ These are planned capabilities. Tumor grade is distinct from conventional cancer
 - NumPy, SciPy, pandas, NiBabel, scikit-learn, Matplotlib, and tqdm installed.
 - Package imports, NumPy-to-GPU interoperability, and dependency checks passed.
 - Clinical metadata inspected: 501 exam records containing 56 grade-2, 43 grade-3, and 402 grade-4 labels before patient reconciliation or exclusions.
+- Core MRI archive transferred to HPC with matching Windows/HPC SHA-256 checksums.
+- Extracted 2,505 NIfTI files; all passed full gzip stream integrity checks (zero failures). See [validation record](results/data-transfer-validation.json) and [reusable validator](scripts/validate_gzip.py). Geometry, mask labels, and patient reconciliation remain pending.
 - Exact package versions saved on HPC; the lock file will be committed after retrieval.
 
 ## Dataset and evaluation design
