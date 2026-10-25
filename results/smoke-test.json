@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "source": "User-provided HPC execution output",
+  "device": "NVIDIA H100 NVL MIG 1g.12gb",
+  "device_memory_gib": 10.75,
+  "peak_allocated_memory_gib": 7,
+  "epochs": 1,
+  "training_batches": 5,
+  "validation_batches": 2,
+  "train_loss": 1.3181,
+  "validation_loss": 1.0772,
+  "checkpointing": false,
+  "compile": false,
+  "note": "Execution check only; losses and patch pseudo-Dice are not model evaluation results."
+}
