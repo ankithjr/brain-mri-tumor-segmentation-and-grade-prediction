@@ -1,6 +1,6 @@
 # Brain MRI Tumor Segmentation and Grade Prediction
 
-**Status: In development.** Environment setup and core MRI transfer are verified; image and label auditing is next. No models have been trained or evaluated for this project yet.
+**Status: In development.** Environment setup and core MRI transfer are verified; automated image auditing passed; visual quality control and patient-disjoint splits are next. No models have been trained or evaluated for this project yet.
 
 A personal medical imaging project developing a reproducible deep learning pipeline to segment diffuse gliomas and predict CNS WHO grade from preoperative MRI using UCSF-PDGM. Development and training use Case Western Reserve University's Markov HPC cluster.
 
@@ -34,7 +34,7 @@ These are planned capabilities. Tumor grade is distinct from conventional cancer
 - Package imports, NumPy-to-GPU interoperability, and dependency checks passed.
 - Clinical metadata inspected: 501 exam records containing 56 grade-2, 43 grade-3, and 402 grade-4 labels before patient reconciliation or exclusions.
 - Core MRI archive transferred to HPC with matching Windows/HPC SHA-256 checksums.
-- Extracted 2,505 NIfTI files; all passed full gzip stream integrity checks (zero failures). See [validation record](results/data-transfer-validation.json) and [reusable validator](scripts/validate_gzip.py). Geometry, mask labels, and patient reconciliation remain pending.
+- Extracted 2,505 NIfTI files; all passed full gzip stream integrity checks (zero failures). See [validation record](results/data-transfer-validation.json) and [reusable validator](scripts/validate_gzip.py). The subsequent automated audit passed for all 501 exams: one file per required modality, matching 3D shapes and affines within each exam, finite voxels, and nonempty integer tumor masks. Observed mask labels are 0, 1, 2, and 4. Exam IDs match metadata and follow-up grouping identifies 495 patients. See [audit script](scripts/audit_dataset.py) and [aggregate audit](results/dataset-audit.json). Visual overlay review, label semantic verification, and patient-disjoint splits remain pending.
 - Exact package versions saved on HPC; the lock file will be committed after retrieval.
 
 ## Dataset and evaluation design
