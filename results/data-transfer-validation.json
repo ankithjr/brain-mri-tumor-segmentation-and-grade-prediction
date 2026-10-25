@@ -1,0 +1,12 @@
+{
+  "source": "User-reported HPC execution output; reusable script adapted from the executed inline check",
+  "archive_sha256": "c58f6b93eb93944dceb2b8f4b1469abaa1259f7d0f094a13021bb77b283bf622",
+  "windows_hpc_archive_hashes_match": true,
+  "extracted_nifti_files": 2505,
+  "gzip_validation": {
+    "checked": 2505,
+    "passed": 2505,
+    "failed": 0
+  },
+  "limitations": "Gzip integrity does not establish NIfTI geometry, segmentation label validity, patient identity, or agreement with publisher checksums."
+}
