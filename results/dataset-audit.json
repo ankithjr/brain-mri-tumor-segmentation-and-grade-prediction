@@ -1,0 +1,12 @@
+{
+  "exams": 501,
+  "patients": 495,
+  "passing_exams": 501,
+  "observed_mask_labels": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "issues": []
+}
