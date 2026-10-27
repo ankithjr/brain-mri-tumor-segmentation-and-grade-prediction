@@ -1,0 +1,33 @@
+{
+  "source": "Aggregate test evaluation output supplied from HPC; nnUNetv2_evaluate_folder",
+  "cohort": "held-out test",
+  "cases": 75,
+  "inference_job_id": 57843,
+  "inference_state": "COMPLETED",
+  "exit_code": "0:0",
+  "checkpoint": "checkpoint_final.pth",
+  "configuration": "3d_fullres",
+  "fold": 0,
+  "foreground_mean": {
+    "Dice": 0.8437763887504705,
+    "IoU": 0.7731007967227578
+  },
+  "classes": {
+    "1": {
+      "source_label": 1,
+      "Dice": 0.8355966971563482,
+      "IoU": 0.7711050073442091
+    },
+    "2": {
+      "source_label": 2,
+      "Dice": 0.8553447047316699,
+      "IoU": 0.7708878362200803
+    },
+    "3": {
+      "source_label": 4,
+      "Dice": 0.8403877643633935,
+      "IoU": 0.7773095466039839
+    }
+  },
+  "note": "Mean foreground is the mean of class-level per-case Dice means reported by nnU-Net. Undefined absent-class scores are omitted by nanmean. Label semantics remain to be verified."
+}
