@@ -1,0 +1,30 @@
+{
+  "source": "Aggregate output transcribed from HPC nnU-Net validation summary; checkpoint identity to be confirmed",
+  "job_id": 57427,
+  "job_state": "COMPLETED",
+  "exit_code": "0:0",
+  "cohort": "validation",
+  "validation_cases": 74,
+  "foreground_mean": {
+    "Dice": 0.8626920901581641,
+    "IoU": 0.7878253316689147
+  },
+  "classes": {
+    "1": {
+      "source_label": 1,
+      "Dice": 0.8682018175735292,
+      "IoU": 0.7982129966703999
+    },
+    "2": {
+      "source_label": 2,
+      "Dice": 0.8611581843593203,
+      "IoU": 0.781061341416201
+    },
+    "3": {
+      "source_label": 4,
+      "Dice": 0.8587162685416424,
+      "IoU": 0.7842016569201432
+    }
+  },
+  "notes": "Mean of three foreground class Dice values as reported by nnU-Net; label semantics not yet verified. Validation is internal development evaluation and test set has not been evaluated."
+}
