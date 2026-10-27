@@ -1,0 +1,51 @@
+{
+  "checkpoint_epoch": 7,
+  "checkpoint_validation_macro_f1": 0.38920134983127114,
+  "splits": {
+    "train": {
+      "cases": 346,
+      "macro_f1": 0.4346737726098191,
+      "balanced_accuracy": 0.4607053596223271,
+      "confusion_matrix": [
+        [
+          18,
+          0,
+          21
+        ],
+        [
+          7,
+          0,
+          23
+        ],
+        [
+          22,
+          0,
+          255
+        ]
+      ]
+    },
+    "validation": {
+      "cases": 74,
+      "macro_f1": 0.38920134983127114,
+      "balanced_accuracy": 0.39971751412429385,
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          6
+        ],
+        [
+          1,
+          0,
+          6
+        ],
+        [
+          3,
+          0,
+          56
+        ]
+      ]
+    }
+  },
+  "note": "User-reported execution; rows true grade 2/3/4, columns predicted grade 2/3/4."
+}
