@@ -1,12 +1,12 @@
 {
-  "source": "User-provided training log; rounded validation scores",
+  "source": "Uploaded HPC training history and user log",
   "job_id": 57874,
   "status": "training complete with early stopping",
   "cohort": "validation",
   "cases": 74,
   "best_epoch": 7,
-  "macro_f1": 0.3892,
-  "balanced_accuracy": 0.3997,
+  "macro_f1": 0.38920134983127114,
+  "balanced_accuracy": 0.39971751412429385,
   "grade_order": [
     2,
     3,
@@ -30,5 +30,6 @@
     ]
   ],
   "sampling": "inverse-class-frequency sampling with replacement; unweighted cross entropy",
-  "notes": "Rows true, columns predicted. Grade 3 recall 0/7. No classification test evaluation. Scores are rounded log values."
+  "notes": "Rows true, columns predicted. Grade 3 recall 0/7. No classification test evaluation.",
+  "epochs_completed": 22
 }
