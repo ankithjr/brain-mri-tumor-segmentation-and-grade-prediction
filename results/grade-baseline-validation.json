@@ -1,0 +1,35 @@
+{
+  "source": "User-provided HPC validation log and confusion matrix",
+  "cohort": "validation",
+  "cases": 74,
+  "job_id": 57873,
+  "best_epoch": 1,
+  "epochs_completed": 16,
+  "early_stopping_patience": 15,
+  "macro_f1": 0.2957393483709273,
+  "balanced_accuracy": 0.3333333333333333,
+  "accuracy": 0.7972972972972973,
+  "grade_order": [
+    2,
+    3,
+    4
+  ],
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      8
+    ],
+    [
+      0,
+      0,
+      7
+    ],
+    [
+      0,
+      0,
+      59
+    ]
+  ],
+  "notes": "Rows true grades, columns predicted grades. All cases predicted grade 4; performance equals a grade-4-only classifier on this validation set. Classification test set not evaluated."
+}
