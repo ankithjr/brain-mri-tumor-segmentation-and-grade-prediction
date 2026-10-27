@@ -16,17 +16,26 @@
     "1": {
       "source_label": 1,
       "Dice": 0.8355966971563482,
-      "IoU": 0.7711050073442091
+      "IoU": 0.7711050073442091,
+      "reference_present_cases": 61,
+      "reference_absent_cases": 14,
+      "defined_dice_cases": 62
     },
     "2": {
       "source_label": 2,
       "Dice": 0.8553447047316699,
-      "IoU": 0.7708878362200803
+      "IoU": 0.7708878362200803,
+      "reference_present_cases": 75,
+      "reference_absent_cases": 0,
+      "defined_dice_cases": 75
     },
     "3": {
       "source_label": 4,
       "Dice": 0.8403877643633935,
-      "IoU": 0.7773095466039839
+      "IoU": 0.7773095466039839,
+      "reference_present_cases": 63,
+      "reference_absent_cases": 12,
+      "defined_dice_cases": 65
     }
   },
   "note": "Mean foreground is the mean of class-level per-case Dice means reported by nnU-Net. Undefined absent-class scores are omitted by nanmean. Label semantics remain to be verified."
