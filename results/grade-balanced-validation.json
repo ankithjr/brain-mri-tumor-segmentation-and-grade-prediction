@@ -1,0 +1,34 @@
+{
+  "source": "User-provided training log; rounded validation scores",
+  "job_id": 57874,
+  "status": "training complete with early stopping",
+  "cohort": "validation",
+  "cases": 74,
+  "best_epoch": 7,
+  "macro_f1": 0.3892,
+  "balanced_accuracy": 0.3997,
+  "grade_order": [
+    2,
+    3,
+    4
+  ],
+  "confusion_matrix": [
+    [
+      2,
+      0,
+      6
+    ],
+    [
+      1,
+      0,
+      6
+    ],
+    [
+      3,
+      0,
+      56
+    ]
+  ],
+  "sampling": "inverse-class-frequency sampling with replacement; unweighted cross entropy",
+  "notes": "Rows true, columns predicted. Grade 3 recall 0/7. No classification test evaluation. Scores are rounded log values."
+}
