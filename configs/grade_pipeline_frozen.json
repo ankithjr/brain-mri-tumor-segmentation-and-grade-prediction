@@ -1,0 +1,36 @@
+{
+  "status": "Frozen before held-out grade evaluation",
+  "segmentation": {
+    "dataset": 501,
+    "configuration": "3d_fullres",
+    "fold": 0,
+    "checkpoint": "checkpoint_final.pth"
+  },
+  "classifier": {
+    "checkpoint": "grade_classifier_oracle_crop/checkpoint_best.pt",
+    "epoch": 17,
+    "sha256": "b56365465a3c883aa1fa22c0bf73ae0685ea30025b4867bfabfcc5d63466b806",
+    "training_crop_source": "reference masks"
+  },
+  "inference": {
+    "crop_source": "segmentation predictions",
+    "foreground": "all nonzero labels",
+    "margin_voxels": 16,
+    "empty_mask_fallback": "whole image",
+    "channels": [
+      "T1",
+      "T1c",
+      "T2",
+      "FLAIR"
+    ],
+    "shape": [
+      96,
+      96,
+      64
+    ],
+    "normalization": "per-volume nonzero-voxel z-score clipped to [-5,5]",
+    "interpolation": "linear",
+    "prediction": "argmax"
+  },
+  "test_patients": 75
+}
