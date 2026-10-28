@@ -4,6 +4,20 @@
 
 A personal medical imaging project developing a reproducible deep learning pipeline to segment diffuse gliomas and predict CNS WHO grade from preoperative MRI using UCSF-PDGM. Development and training use Case Western Reserve University's Markov HPC cluster.
 
+## Held-out pipeline results
+
+Segmentation mean foreground Dice: **0.8438**. Grading uses automatic segmentation crops and the fixed epoch-17 classifier on the same 75 held-out patients.
+
+| Grading metric | Estimate | 95% stratified patient-bootstrap interval |
+| --- | ---: | ---: |
+| Macro-F1 | 0.6086 | 0.4593–0.7522 |
+| Balanced accuracy | 64.1% | 46.9%–81.3% |
+| Accuracy | 80.0% | 70.7%–88.0% |
+
+Intervals use 10,000 within-grade bootstrap resamples of a fixed trained model and do not capture training or external-site variability. The grade-2 and grade-3 test groups contain only 9 and 6 patients. See [verified predictions and uncertainty methods](docs/grade-test-analysis.md).
+
+![Held-out grade confusion matrix and recall intervals](results/figures/grade-test-confusion-recall.svg)
+
 ## Project Focus
 
 - Multisequence **brain MRI**
