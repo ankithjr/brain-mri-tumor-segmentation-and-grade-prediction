@@ -1,0 +1,39 @@
+{
+  "source": "User-provided HPC history summary",
+  "experiment": "oracle tumor bounding-box crop with 16-voxel margin using reference masks",
+  "cohort": "validation",
+  "cases": 74,
+  "job_id": 58033,
+  "epochs_completed": 32,
+  "best_epoch": 17,
+  "macro_f1": 0.6858465608465609,
+  "balanced_accuracy": 0.739911218724778,
+  "grade_order": [
+    2,
+    3,
+    4
+  ],
+  "confusion_matrix": [
+    [
+      6,
+      2,
+      0
+    ],
+    [
+      3,
+      4,
+      0
+    ],
+    [
+      1,
+      5,
+      53
+    ]
+  ],
+  "grade_recall": {
+    "2": 0.75,
+    "3": 0.5714285714285714,
+    "4": 0.8983050847457628
+  },
+  "notes": "Rows true, columns predicted. Reference masks define crop at training and validation. Not an automatic pipeline result. Classification test set not evaluated; model selection uses validation."
+}
