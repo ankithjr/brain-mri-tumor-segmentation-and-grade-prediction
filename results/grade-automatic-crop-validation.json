@@ -1,0 +1,39 @@
+{
+  "source": "User-provided completed GPU evaluation output",
+  "job_id": 58043,
+  "cohort": "validation",
+  "cases": 74,
+  "checkpoint_epoch": 17,
+  "checkpoint_sha256": "b56365465a3c883aa1fa22c0bf73ae0685ea30025b4867bfabfcc5d63466b806",
+  "crop_source": "automatic segmentation predictions",
+  "macro_f1": 0.7060744955481798,
+  "balanced_accuracy": 0.7759281678773204,
+  "grade_order": [
+    2,
+    3,
+    4
+  ],
+  "confusion_matrix": [
+    [
+      7,
+      1,
+      0
+    ],
+    [
+      3,
+      4,
+      0
+    ],
+    [
+      1,
+      6,
+      52
+    ]
+  ],
+  "recall_per_grade": {
+    "2": 0.875,
+    "3": 0.5714285714285714,
+    "4": 0.8813559322033898
+  },
+  "notes": "Classifier trained on reference-mask crops and selected using oracle validation macro-F1; evaluated without retraining on predicted-mask validation crops. Small validation minority-class counts. Classification test set remains unevaluated."
+}
