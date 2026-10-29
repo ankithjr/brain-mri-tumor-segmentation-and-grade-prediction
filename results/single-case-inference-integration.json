@@ -1,0 +1,29 @@
+{
+  "verification_source": "User-reported Markov terminal output",
+  "job_id": 58407,
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "status": "complete",
+  "exam_id": "UCSF-PDGM-0005",
+  "cohort": "Previously evaluated validation case",
+  "reference_grade": 4,
+  "predicted_grade": 3,
+  "correct": false,
+  "probabilities": {
+    "2": 0.2498103231191635,
+    "3": 0.6893322467803955,
+    "4": 0.060857489705085754
+  },
+  "empty_prediction_fallback": false,
+  "comparison": {
+    "previous_prediction": 3,
+    "new_prediction": 3,
+    "absolute_probability_differences_displayed": {
+      "2": "0.00000000",
+      "3": "0.00000000",
+      "4": "0.00000000"
+    },
+    "precision_note": "Agreement at reported eight-decimal difference precision; full-precision prior probabilities and voxelwise mask equality were not independently checked."
+  },
+  "scope": "Single-case integration/reproducibility check, not a new accuracy evaluation. No retraining or tuning."
+}
