@@ -1,0 +1,41 @@
+{
+  "source": "User-reported Markov terminal output; packaged checkpoint hashes match independently verified archive manifest",
+  "status": "complete",
+  "exam_id": "UCSF-PDGM-0005",
+  "cohort": "Previously evaluated validation exam",
+  "weights_source": "Extracted local brain-mri-models-v1.tar.gz archive",
+  "archive_sha256": "b20aae39903ce75767cdaec89dae41be9b68b54f79ebf79e8049ea782e56f0a5",
+  "segmentation_sha256": "fcdce8cf16fa6bdd2ff97418c6cc112b38b0ad1ab6b7922227ef16ece606691d",
+  "classifier_sha256": "b56365465a3c883aa1fa22c0bf73ae0685ea30025b4867bfabfcc5d63466b806",
+  "classifier_epoch": 17,
+  "reference_grade": 4,
+  "predicted_grade": 3,
+  "probabilities": {
+    "2": 0.2498103231191635,
+    "3": 0.6893322467803955,
+    "4": 0.060857489705085754
+  },
+  "matches_prior_demo_reported_probabilities": true,
+  "empty_prediction_fallback": false,
+  "crop_bounds_start_stop": [
+    [
+      47,
+      127
+    ],
+    [
+      90,
+      174
+    ],
+    [
+      43,
+      134
+    ]
+  ],
+  "classifier_input_shape": [
+    4,
+    96,
+    96,
+    64
+  ],
+  "scope": "Extracted-package inference in existing Markov environment. No retraining. Fresh-machine setup, re-download inference, and voxelwise mask equality were not tested. Known grading error reproduced."
+}
