@@ -17,7 +17,7 @@ Dataset501_UCSFPDGM/nnUNetTrainer__nnUNetPlans__3d_fullres/
     fold_0/checkpoint_final.pth
 ```
 
-The classifier checkpoint must match SHA-256 `b56365465a3c883aa1fa22c0bf73ae0685ea30025b4867bfabfcc5d63466b806`. Checkpoints are not distributed in the repository. The CLI records the segmentation checkpoint hash, but its reference hash has not yet been archived, so verify that it is the evaluated final checkpoint.
+The classifier checkpoint must match SHA-256 `b56365465a3c883aa1fa22c0bf73ae0685ea30025b4867bfabfcc5d63466b806`. Checkpoints are excluded from Git history. A verified model archive is prepared with [setup instructions and checksums](model-package.md); Release asset upload is pending. The evaluated final segmentation checkpoint SHA-256 is `fcdce8cf16fa6bdd2ff97418c6cc112b38b0ad1ab6b7922227ef16ece606691d`. The CLI records this hash, but does not yet enforce its reference value; verify the archive before use.
 
 ## Run inside a GPU allocation
 
