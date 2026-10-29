@@ -20,7 +20,7 @@ Intervals use 10,000 within-grade bootstrap resamples of a fixed trained model a
 
 ## Single-exam inference
 
-A new [inference command](docs/single-case-inference.md) accepts four preprocessed MRI sequences and produces a tumor mask, predicted grade, and uncalibrated class probabilities using the frozen pipeline. CPU preprocessing parity tests pass; full GPU integration is pending a Markov demo run. The [demo batch script](slurm/predict_case_demo.sbatch) uses an already evaluated validation exam without retraining.
+A new [inference command](docs/single-case-inference.md) accepts four preprocessed MRI sequences and produces a tumor mask, predicted grade, and uncalibrated class probabilities using the frozen pipeline. CPU preprocessing parity tests pass. Markov job 58407 completed the full GPU pipeline with exit code 0:0 on validation exam UCSF-PDGM-0005; class probabilities matched the prior validation run at the displayed eight-decimal difference precision. This is a reproducibility check, not an accuracy improvement: reference grade 4 was predicted as grade 3. See the [integration record](results/single-case-inference-integration.json). The [demo batch script](slurm/predict_case_demo.sbatch) uses an already evaluated validation exam without retraining.
 
 ## Project Focus
 
