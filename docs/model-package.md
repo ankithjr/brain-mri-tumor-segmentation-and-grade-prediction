@@ -6,7 +6,7 @@ The uploaded archive was independently checked against its recorded SHA-256 and 
 - Size: 233529574 bytes (about 222.71 MiB)
 - SHA-256: `b20aae39903ce75767cdaec89dae41be9b68b54f79ebf79e8049ea782e56f0a5`
 - File manifest: [model-package-checksums.json](../configs/model-package-checksums.json)
-- Publication status: verified package prepared; GitHub Release asset upload pending.
+- Publication status: [v1.0.0 published](https://github.com/ankithjr/brain-mri-tumor-segmentation-and-grade-prediction/releases/tag/v1.0.0); asset state uploaded, size and GitHub SHA-256 digest match the independently verified archive.
 
 ## Environment
 
@@ -27,7 +27,7 @@ The package snapshot preserves the observed training environment; it is not a de
 
 ## Verify and unpack
 
-Download the asset from the repository's Releases page once published, then verify it before extracting:
+Download [brain-mri-models-v1.tar.gz](https://github.com/ankithjr/brain-mri-tumor-segmentation-and-grade-prediction/releases/download/v1.0.0/brain-mri-models-v1.tar.gz), then verify it before extracting:
 
 ```bash
 echo "b20aae39903ce75767cdaec89dae41be9b68b54f79ebf79e8049ea782e56f0a5  brain-mri-models-v1.tar.gz" | sha256sum --check
