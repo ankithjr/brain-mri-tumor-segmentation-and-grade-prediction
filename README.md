@@ -30,6 +30,14 @@ For this previously evaluated validation exam, whole-tumor 3D Dice is **0.9319**
 
 The displayed canonical axial slice (index 87) was selected by largest reference tumor area. This known grading error is an illustrative example, not a representative sample or evidence of the cause of the error. The probabilities are uncalibrated. See [case metrics and selection record](results/case-0005-review.json); data attribution and license are below.
 
+## Correctly graded validation example
+
+![Reference and predicted masks for correctly graded validation exam UCSF-PDGM-0009](results/figures/UCSF-PDGM-0009-mask-review.png)
+
+UCSF-PDGM-0009 is the first correctly graded validation exam by sorted exam ID. Reference and predicted grades are both **4**; whole-tumor 3D Dice is **0.9796**. Per-label Dice is 0.9537 (source 1), 0.9716 (source 2), and 0.9489 (source 4). The uncalibrated grade-4 softmax output is 0.8980.
+
+The displayed canonical axial slice (index 118) has the largest reference tumor area. This selected success and the error example above illustrate individual outcomes; neither is a representative sample or a replacement for cohort metrics. See [case metrics and selection record](results/case-0009-review.json). Whole-tumor Dice measures the union of foreground labels, not the cohort's mean foreground class Dice. Both figures use UCSF-PDGM data; attribution and license are below.
+
 ## Project Focus
 
 - Multisequence **brain MRI**
