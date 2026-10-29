@@ -68,7 +68,7 @@ Expect `prediction.json` with `status: complete` and `segmentation/case.nii.gz`.
 
 ## Evaluation and limits
 
-On 75 held-out patients, segmentation mean foreground Dice was 0.8438; automatic-crop grading macro-F1 was 0.6086 and balanced accuracy 0.6407. The test cohort contains only 9 grade-2 and 6 grade-3 patients; see [uncertainty analysis](grade-test-analysis.md). Validation examples include both a correct grade-4 prediction and a grade-4-to-3 error. The single-case CLI reproduced a prior validation prediction at displayed probability precision; a clean-machine/package extraction inference run remains to be checked.
+On 75 held-out patients, segmentation mean foreground Dice was 0.8438; automatic-crop grading macro-F1 was 0.6086 and balanced accuracy 0.6407. The test cohort contains only 9 grade-2 and 6 grade-3 patients; see [uncertainty analysis](grade-test-analysis.md). Validation examples include both a correct grade-4 prediction and a grade-4-to-3 error. The single-case CLI reproduced a prior validation prediction at displayed probability precision; inference using the extracted package subsequently completed in the existing Markov environment with matching checkpoint hashes and identical reported probabilities for UCSF-PDGM-0005. See [package inference check](../results/model-package-inference-check.json). A clean-machine installation remains untested.
 
 The segmentation model was trained on 346 development patients, with 74 validation patients; nnU-Net planning used the pooled development cohort. The grader was trained with reference-mask crops and evaluated with automatic crops. Results are single-institution and do not establish external clinical performance. Research and educational use only.
 
