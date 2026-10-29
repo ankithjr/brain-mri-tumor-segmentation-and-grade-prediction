@@ -8,4 +8,4 @@ Includes the fold-0 final nnU-Net checkpoint, epoch-17 classifier, plans, datase
 Held-out evaluation (75 patients): segmentation mean foreground Dice 0.8438; grading macro-F1 0.6086; balanced accuracy 0.6407. Probabilities are uncalibrated; single-institution research results, not a clinical diagnostic tool.
 
 Setup: https://github.com/ankithjr/brain-mri-tumor-segmentation-and-grade-prediction/blob/main/docs/model-package.md
-Requires separately obtained, preprocessed T1/T1c/T2/FLAIR MRI and the recorded Linux/Python/PyTorch/nnU-Net environment. Fresh-machine installation and extracted-package inference remain unverified.
+Requires separately obtained, preprocessed T1/T1c/T2/FLAIR MRI and the recorded Linux/Python/PyTorch/nnU-Net environment. Extracted-package inference subsequently passed in the existing Markov environment, reproducing the prior validation demo probabilities. Fresh-machine installation remains unverified. See results/model-package-inference-check.json.
