@@ -1,6 +1,6 @@
 # Single-case inference
 
-`scripts/predict_case.py` runs the frozen fold-0 final nnU-Net checkpoint followed by the hash-verified epoch-17 crop classifier. It requires no grade label or reference segmentation. The CLI wrapper is new: CPU preprocessing parity and input rejection checks pass locally; full checkpoint/GPU integration remains pending a Markov demo run.
+`scripts/predict_case.py` runs the frozen fold-0 final nnU-Net checkpoint followed by the hash-verified epoch-17 crop classifier. It requires no grade label or reference segmentation. The CLI wrapper is new: CPU preprocessing parity and input rejection checks pass locally; Markov job 58407 subsequently completed full checkpoint/GPU integration with exit code 0:0 on validation exam UCSF-PDGM-0005. It reproduced the earlier grade-3 prediction with probability differences displayed as 0.00000000. The reference grade is 4, so this remains a misclassified case. See [integration record](../results/single-case-inference-integration.json).
 
 ## Inputs and models
 
@@ -55,4 +55,4 @@ Existing output directories are rejected. A failed run retains diagnostic output
 python -m unittest discover -s tests -v
 ```
 
-CPU tests compare the new crop function bit-for-bit against the executed archived preprocessing source on synthetic boundary-touching and empty-mask cases. They also check rejection of mismatched image geometry and invalid mask values. They do not validate checkpoint execution, model accuracy, or clinical generalization. After the Markov demo, compare its output against the existing automatic validation prediction for UCSF-PDGM-0005 and retain the demo log.
+CPU tests compare the new crop function bit-for-bit against the executed archived preprocessing source on synthetic boundary-touching and empty-mask cases. They also check rejection of mismatched image geometry and invalid mask values. They do not validate checkpoint execution, model accuracy, or clinical generalization. The Markov demo comparison against the existing automatic validation prediction for UCSF-PDGM-0005 passed at the reported precision. The complete HPC log and voxelwise mask comparison have not been independently archived.
