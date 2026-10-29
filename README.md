@@ -22,6 +22,8 @@ Intervals use 10,000 within-grade bootstrap resamples of a fixed trained model a
 
 The frozen inference checkpoints have been packaged and independently verified against the recorded SHA-256 hashes. The archive contains no MRI files. See [environment setup, archive verification, and inference instructions](docs/model-package.md). The [v1.0.0 model release](https://github.com/ankithjr/brain-mri-tumor-segmentation-and-grade-prediction/releases/tag/v1.0.0) is published; GitHub reports the expected asset size and matching SHA-256 digest. Weights are kept out of Git history.
 
+Extracted-package inference also completed in the existing Markov environment: checkpoint hashes matched and the UCSF-PDGM-0005 class probabilities reproduced the prior demo exactly as reported. This reproduced a known grading error, not an accuracy improvement. See [package inference check](results/model-package-inference-check.json). Fresh-machine environment setup remains untested.
+
 ## Single-exam inference
 
 A new [inference command](docs/single-case-inference.md) accepts four preprocessed MRI sequences and produces a tumor mask, predicted grade, and uncalibrated class probabilities using the frozen pipeline. CPU preprocessing parity tests pass. Markov job 58407 completed the full GPU pipeline with exit code 0:0 on validation exam UCSF-PDGM-0005; class probabilities matched the prior validation run at the displayed eight-decimal difference precision. This is a reproducibility check, not an accuracy improvement: reference grade 4 was predicted as grade 3. See the [integration record](results/single-case-inference-integration.json). The [demo batch script](slurm/predict_case_demo.sbatch) uses an already evaluated validation exam without retraining.
