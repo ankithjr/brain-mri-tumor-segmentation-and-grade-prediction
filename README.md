@@ -18,6 +18,10 @@ Intervals use 10,000 within-grade bootstrap resamples of a fixed trained model a
 
 ![Held-out grade confusion matrix and recall intervals](results/figures/grade-test-confusion-recall.svg)
 
+## Single-exam inference
+
+A new [inference command](docs/single-case-inference.md) accepts four preprocessed MRI sequences and produces a tumor mask, predicted grade, and uncalibrated class probabilities using the frozen pipeline. CPU preprocessing parity tests pass; full GPU integration is pending a Markov demo run. The [demo batch script](slurm/predict_case_demo.sbatch) uses an already evaluated validation exam without retraining.
+
 ## Project Focus
 
 - Multisequence **brain MRI**
