@@ -22,6 +22,14 @@ Intervals use 10,000 within-grade bootstrap resamples of a fixed trained model a
 
 A new [inference command](docs/single-case-inference.md) accepts four preprocessed MRI sequences and produces a tumor mask, predicted grade, and uncalibrated class probabilities using the frozen pipeline. CPU preprocessing parity tests pass. Markov job 58407 completed the full GPU pipeline with exit code 0:0 on validation exam UCSF-PDGM-0005; class probabilities matched the prior validation run at the displayed eight-decimal difference precision. This is a reproducibility check, not an accuracy improvement: reference grade 4 was predicted as grade 3. See the [integration record](results/single-case-inference-integration.json). The [demo batch script](slurm/predict_case_demo.sbatch) uses an already evaluated validation exam without retraining.
 
+## Qualitative validation error example
+
+![Reference and predicted masks for validation exam UCSF-PDGM-0005](results/figures/UCSF-PDGM-0005-mask-review.png)
+
+For this previously evaluated validation exam, whole-tumor 3D Dice is **0.9319**, yet the classifier predicts **grade 3** for reference **grade 4**. Per-label 3D Dice is 0.9083 (source 1), 0.9117 (source 2), and 0.8387 (source 4). Whole-tumor Dice measures the union of foreground labels and differs from mean foreground class Dice reported for the cohort.
+
+The displayed canonical axial slice (index 87) was selected by largest reference tumor area. This known grading error is an illustrative example, not a representative sample or evidence of the cause of the error. The probabilities are uncalibrated. See [case metrics and selection record](results/case-0005-review.json); data attribution and license are below.
+
 ## Project Focus
 
 - Multisequence **brain MRI**

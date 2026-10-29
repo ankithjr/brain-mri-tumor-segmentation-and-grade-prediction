@@ -1,0 +1,27 @@
+{
+  "exam_id": "UCSF-PDGM-0005",
+  "cohort": "validation",
+  "reference_grade": 4,
+  "predicted_grade": 3,
+  "probabilities": {
+    "2": 0.2498103231191635,
+    "3": 0.6893322467803955,
+    "4": 0.060857489705085754
+  },
+  "dice_3d_per_remapped_label": {
+    "1": 0.9083069847657372,
+    "2": 0.9117387095416474,
+    "3": 0.8387207702888583
+  },
+  "whole_tumor_dice_3d": 0.9318641860137644,
+  "display_orientation": "RAS canonical",
+  "slice_axis": 2,
+  "slice_index": 87,
+  "slice_selection": "Largest reference foreground area; first index on ties",
+  "label_mapping": {
+    "1": "source 1",
+    "2": "source 2",
+    "3": "source 4"
+  },
+  "selection_note": "Previously used integration demo; known grading error, not a representative sample"
+}
