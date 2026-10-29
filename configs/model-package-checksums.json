@@ -1,0 +1,11 @@
+{
+  "source": "User-reported SHA-256 checks on Markov; original model files remain on HPC",
+  "algorithm": "sha256",
+  "files": {
+    "nnUNet_results/Dataset501_UCSFPDGM/nnUNetTrainer__nnUNetPlans__3d_fullres/dataset.json": "eb17a2794965ec95bb84bf5072a8a44e739f42b80810238559440c24b03db6f1",
+    "nnUNet_results/Dataset501_UCSFPDGM/nnUNetTrainer__nnUNetPlans__3d_fullres/plans.json": "35ffe0a643b161e5beddd820fb9a9262dcb12890a28de9c42c310fc5101a00d8",
+    "nnUNet_results/Dataset501_UCSFPDGM/nnUNetTrainer__nnUNetPlans__3d_fullres/fold_0/checkpoint_final.pth": "fcdce8cf16fa6bdd2ff97418c6cc112b38b0ad1ab6b7922227ef16ece606691d",
+    "checkpoints/grade_classifier_oracle_crop/checkpoint_best.pt": "b56365465a3c883aa1fa22c0bf73ae0685ea30025b4867bfabfcc5d63466b806"
+  },
+  "scope": "Four inference model/configuration files only. MRI data are not part of the intended package."
+}
