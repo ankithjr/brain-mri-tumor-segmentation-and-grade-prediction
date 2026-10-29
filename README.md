@@ -20,7 +20,7 @@ Intervals use 10,000 within-grade bootstrap resamples of a fixed trained model a
 
 ## Model package
 
-The frozen inference checkpoints have been packaged and independently verified against the recorded SHA-256 hashes. The archive contains no MRI files. See [environment setup, archive verification, and inference instructions](docs/model-package.md). Release asset upload is pending; weights are kept out of Git history.
+The frozen inference checkpoints have been packaged and independently verified against the recorded SHA-256 hashes. The archive contains no MRI files. See [environment setup, archive verification, and inference instructions](docs/model-package.md). The [v1.0.0 model release](https://github.com/ankithjr/brain-mri-tumor-segmentation-and-grade-prediction/releases/tag/v1.0.0) is published; GitHub reports the expected asset size and matching SHA-256 digest. Weights are kept out of Git history.
 
 ## Single-exam inference
 
